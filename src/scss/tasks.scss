@@ -1,0 +1,61 @@
+.tasks {
+  margin: 55px 0 100px 75px;
+  width: 510px;
+  background-color: white;
+  padding: 33px 35px 33px 35px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+
+  h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 35px;
+
+    h4 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+    }
+
+    span {
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 16px;
+      color: #828694;
+    }
+    &-img {
+      display: inline-block;
+      margin-right: 20px;
+      width: 45px;
+      height: 45px;
+      background: #e7f8f5;
+      border-radius: 25px;
+      text-align: center;
+
+      img {
+        margin-top: 15px;
+      }
+
+      &--rejected {
+        background: #fceded;
+      }
+      &--check {
+        background: #e7f8f5;
+      }
+      &--pending {
+        background: #fef3e9;
+      }
+    }
+  }
+}

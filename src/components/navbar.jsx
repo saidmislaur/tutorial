@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button, ButtonBase } from '@material-ui/core';
+
 import Logo from '../assets/img/logo.svg';
 import Graphic from '../assets/img/graphic.svg';
 import Materials from '../assets/img/materials.svg';
@@ -12,16 +14,24 @@ const Navbar = () => {
       <nav>
         <ul>
           <li>
-            <img src={Logo} alt="logo" />
+            <ButtonBase>
+              <img alt="logo" src={Logo} />
+            </ButtonBase>
           </li>
           <li>
-            <img src={Graphic} alt="" />
+            <ButtonBase>
+              <img alt="logo" src={Graphic} />
+            </ButtonBase>
           </li>
           <li>
-            <img src={Materials} alt="" />
+            <ButtonBase>
+              <img alt="logo" src={Materials} />
+            </ButtonBase>
           </li>
           <li>
-            <img src={Youtube} alt="" />
+            <ButtonBase>
+              <img alt="logo" src={Youtube} />
+            </ButtonBase>
           </li>
         </ul>
       </nav>
