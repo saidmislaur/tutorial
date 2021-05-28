@@ -2,7 +2,6 @@ import React from 'react';
 import Completed from '../components/completed';
 import Header from '../components/header';
 import Tasks from '../components/tasks';
-import TasksInfo from '../components/tasksInfo';
 
 import Check from '../assets/img/check.svg';
 import Rejected from '../assets/img/rejected.svg';
@@ -61,9 +60,9 @@ function Activities() {
     <div>
       <Header />
       <div className="content">
-        {/* <Tasks list={list} status={status} />
-        <Completed /> */}
-        <TasksInfo list={list} status={status} />
+        <Tasks list={list} status={status} />
+        <Completed />
+        {/* */}
       </div>
     </div>
   );

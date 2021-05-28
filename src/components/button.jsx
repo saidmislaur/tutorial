@@ -2,11 +2,11 @@ import React from 'react';
 import '../scss/button.scss';
 import AddIcon from '@material-ui/icons/Add';
 
-const Button = () => {
+const Button = ({ text }) => {
   return (
     <div className="button">
       <button>
-        <AddIcon /> Отправить задание
+        <AddIcon /> {text}
       </button>
     </div>
   );

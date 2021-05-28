@@ -1,6 +1,7 @@
 import React from 'react';
+import Profile from './profile';
 import IconButton from '@material-ui/core/IconButton';
-import Avatar from '../assets/img/avatar.png';
+
 import '../scss/header.scss';
 
 const Header = () => {
@@ -10,17 +11,11 @@ const Header = () => {
         <h2>Активность</h2>
       </div>
       <div className="header__profile">
-        <div className="header__profile-avatar">
-          <img src={Avatar} alt="ava" />
-        </div>
-        <div className="header__profile-info">
-          <div className="header__profile-info--userName">
-            <span>Алексей Степанов</span>
-          </div>
-          <div className="header__profile-info--status">
-            <span>Потом №1, старт обучения 24 ноября</span>
-          </div>
-        </div>
+        <Profile
+          classnames="header__profile-info--userName"
+          userName="Алексей Степанов"
+          userStatus="Потом №1, старт обучения 24 ноября"
+        />
         <div className="header__profile-exit">
           <IconButton aria-label="delete">
             <svg
