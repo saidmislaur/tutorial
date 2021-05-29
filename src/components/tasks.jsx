@@ -1,7 +1,7 @@
 import React from 'react';
+
 import Button from './button';
 import { Link } from 'react-router-dom';
-import TasksInfo from './tasksInfo';
 
 import '../scss/tasks.scss';
 
@@ -9,9 +9,9 @@ const Tasks = ({ list, status }) => {
   return (
     <div className="tasks">
       <h3>Задания</h3>
-      {list.map((item) => (
+      {list.map((item, index) => (
         <div>
-          <Link key={list.id} to={`/task/${list.id}`} component={TasksInfo}>
+          <Link key={index} to={`/task/${index}`}>
             <div className="tasks__list">
               <div className={`tasks__list-img tasks__list-img--${item.status}`}>
                 <img src={status[item.status].img} alt="logo" />

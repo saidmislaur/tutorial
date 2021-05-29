@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Completed from '../components/completed';
 import Header from '../components/header';
 import Tasks from '../components/tasks';
+import TasksInfo from '../components/tasksInfo';
 
 import Check from '../assets/img/check.svg';
 import Rejected from '../assets/img/rejected.svg';
@@ -57,14 +59,22 @@ const status = {
 
 function Activities() {
   return (
-    <div>
-      <Header />
-      <div className="content">
-        <Tasks list={list} status={status} />
-        <Completed />
-        {/* */}
+    <Router>
+      <div>
+        <Header />
+        <div className="content">
+          <Route exact path="/" component={() => <Tasks list={list} status={status} />} />
+          <Route exact path="/" component={() => <Completed />} />
+          {list.map((list, index) => (
+            <Route
+              exact
+              path={`/task/${index}`}
+              component={() => <TasksInfo list={list} status={status} />}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

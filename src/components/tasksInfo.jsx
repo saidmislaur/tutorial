@@ -12,18 +12,21 @@ const comments = [
 const TasksInfo = ({ list, status }) => {
   return (
     <div className="tasks tasks--tasks-info">
-      <div className="tasks__list tasks__list-task">
-        <div className={`tasks__list-img tasks__list-img--${list[0].status}`}>
-          <img src={status[list[0].status].img} alt="logo" />
-        </div>
-        <div className="tasks__info-title">
-          <h4>Задание #2</h4>
-          <span>Отправлено: {list[0].sentAt}</span> —<span>Статус: </span>
-          <span className="tasks__info-title tasks__info-title--status">
-            {status[list[list.id].status].text}
-          </span>
+      <div>
+        <div className="tasks__list tasks__list-task">
+          <div className={`tasks__list-img tasks__list-img--${list.status}`}>
+            <img src={status[list.status].img} alt="logo" />
+          </div>
+          <div className="tasks__info-title">
+            <h4>Задание #{list.number}</h4>
+            <span>Отправлено: {list.sentAt}</span> — <span>Статус: </span>
+            <span className="tasks__info-title tasks__info-title--status">
+              {status[list.status].text}
+            </span>
+          </div>
         </div>
       </div>
+
       <div className="tasks__link">
         <h2>Ссылка на pull request:</h2>
         <a href="https://github.com/saidmislaur/tutorial">

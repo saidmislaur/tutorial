@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, ButtonBase } from '@material-ui/core';
+import { ButtonBase } from '@material-ui/core';
 
 import Logo from '../assets/img/logo.svg';
 import Graphic from '../assets/img/graphic.svg';
