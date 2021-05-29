@@ -3,6 +3,7 @@ import './index.scss';
 import LoginPage from './pages/LoginPage';
 import Activities from './pages/activities';
 import Navbar from './components/navbar';
+import Materials from './pages/materials';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             component={() => <LoginPage title={['вход в кабинет', 'Регистрация успешна']} />}
           />
           <Route exact path="/" component={() => <Activities />} />
+          <Route exact path="/materials" component={() => <Materials />} />
         </div>
       </div>
     </Router>

@@ -1,0 +1,45 @@
+.materials {
+  display: flex;
+}
+.materialsContent {
+  width: 570px;
+  height: 634px;
+  background: #ffffff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  margin: 55px 0px 127px 45px;
+  padding-top: 33px;
+
+  &__title {
+    margin-left: 33px;
+    h1 {
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+      color: #000000;
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+    ul {
+      li {
+        font-family: Roboto;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        font-family: Roboto;
+        font-size: 24px;
+        line-height: 28px;
+        padding: 20px 30px 20px 33px;
+        color: #282828;
+        cursor: pointer;
+
+        &:hover {
+          background: rgba(196, 196, 196, 0.05);
+        }
+      }
+    }
+  }
+}
