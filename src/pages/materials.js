@@ -38,7 +38,7 @@ const contentDB = [
       },
       {
         id: 1,
-        title: 'Как выполнить вопрос на сервер?',
+        title: 'Как выполнить запрос на сервер?',
         text: 'ffdhgjhdfjgk',
       },
     ],
@@ -48,13 +48,20 @@ const contentDB = [
 const Materials = () => {
   return (
     <Router>
+      <Header title="Материалы" />
       <div>
-        <Header />
         <div className="materials">
-          {contentDB.map((data) => (
-            <Route exact path="/materials" component={() => <Content data={data} />} />
+          <Route exact path="/materials" component={() => <Content data={contentDB} />} />
+          {contentDB.map((items, index) => (
+            <div>
+              {items.content.map((item) => (
+                <Route
+                  path={`/materials/${items.name}/${item.id}`}
+                  component={() => <ContentInfo data={item} />}
+                />
+              ))}
+            </div>
           ))}
-          <Route path="/materials/info" component={() => <ContentInfo />} />
         </div>
       </div>
     </Router>

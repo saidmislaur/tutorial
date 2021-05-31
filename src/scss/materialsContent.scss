@@ -1,5 +1,7 @@
 .materials {
-  display: flex;
+  &-block {
+    display: flex;
+  }
 }
 .materialsContent {
   width: 570px;

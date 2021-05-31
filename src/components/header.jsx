@@ -4,11 +4,11 @@ import IconButton from '@material-ui/core/IconButton';
 
 import '../scss/header.scss';
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <div className="header">
       <div className="header__title">
-        <h2>Активность</h2>
+        <h2>{title}</h2>
       </div>
       <div className="header__profile">
         <Profile

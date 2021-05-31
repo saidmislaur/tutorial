@@ -1,14 +1,19 @@
 import React from 'react';
 
-const ContentInfo = () => {
+import '../scss/contentInfo.scss';
+
+const ContentInfo = ({ data }) => {
+  console.log(data);
   return (
     <div className="contentInfo">
-      <div className="contentInfo__title">
-        <h2>Что такое useState</h2>
-      </div>
-      <div className="contentInfo__list">
-        <h3>asd</h3>
-        <p>asd</p>
+      <div>
+        <div className="contentInfo__title">
+          <h2>{data.title}</h2>
+        </div>
+        <div className="contentInfo__list">
+          <h3>{data.text}</h3>
+          <p>{data.text}</p>
+        </div>
       </div>
     </div>
   );

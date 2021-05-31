@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { ButtonBase } from '@material-ui/core';
 
 import Logo from '../assets/img/logo.svg';
@@ -14,9 +14,11 @@ const Navbar = () => {
       <nav>
         <ul>
           <li>
-            <ButtonBase>
-              <img alt="logo" src={Logo} />
-            </ButtonBase>
+            <Link to="/">
+              <ButtonBase>
+                <img alt="logo" src={Logo} />
+              </ButtonBase>
+            </Link>
           </li>
           <li>
             <ButtonBase>
@@ -24,14 +26,18 @@ const Navbar = () => {
             </ButtonBase>
           </li>
           <li>
-            <ButtonBase>
-              <img alt="logo" src={Materials} />
-            </ButtonBase>
+            <Link to="/materials">
+              <ButtonBase>
+                <img alt="logo" src={Materials} />
+              </ButtonBase>
+            </Link>
           </li>
           <li>
-            <ButtonBase>
-              <img alt="logo" src={Youtube} />
-            </ButtonBase>
+            <Link to="/lessons">
+              <ButtonBase>
+                <img alt="logo" src={Youtube} />
+              </ButtonBase>
+            </Link>
           </li>
         </ul>
       </nav>

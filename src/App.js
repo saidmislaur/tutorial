@@ -4,6 +4,7 @@ import LoginPage from './pages/LoginPage';
 import Activities from './pages/activities';
 import Navbar from './components/navbar';
 import Materials from './pages/materials';
+import VideoLessons from './pages/videoLessons';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
             component={() => <LoginPage title={['вход в кабинет', 'Регистрация успешна']} />}
           />
           <Route exact path="/" component={() => <Activities />} />
-          <Route exact path="/materials" component={() => <Materials />} />
+          <Route path="/materials" component={() => <Materials />} />
+          <Route path="/lessons" component={() => <VideoLessons />} />
         </div>
       </div>
     </Router>

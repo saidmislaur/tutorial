@@ -61,13 +61,12 @@ function Activities() {
   return (
     <Router>
       <div>
-        <Header />
+        <Header title="Активность" />
         <div className="content">
           <Route exact path="/" component={() => <Tasks list={list} status={status} />} />
           <Route exact path="/" component={() => <Completed />} />
           {list.map((list, index) => (
             <Route
-              exact
               path={`/task/${index}`}
               component={() => <TasksInfo list={list} status={status} />}
             />
