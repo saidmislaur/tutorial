@@ -33,7 +33,7 @@ const VideoLessons = () => {
   return (
     <div>
       <Router>
-        <Header title={'видеоуроки'} />
+        <Header title={'Видеоуроки'} />
         <div className="lessons">
           <Route exact path="/lessons" component={() => <VideoBlock items={lessonList} />} />
           {lessonList.map((data) => (
